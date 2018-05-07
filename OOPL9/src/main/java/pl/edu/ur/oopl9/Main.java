@@ -1,21 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package pl.edu.ur.oopl9;
 
-/**
- *
- * @author maarchyl
- */
-public class Main {
+import java.util.Arrays;
+import java.util.Random;
+class LosowanieSortowanie {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Random losujLiczby = new Random();
+        int[] tablica;
+        tablica = new int[100];
+        for (int i = 0; i < tablica.length; i++) {
+            tablica[i]=losujLiczby.nextInt(101);
+        }
+        System.out.println(Arrays.binarySearch(tablica,5));
+        Arrays.sort(tablica);
+        System.out.println(Arrays.binarySearch(tablica,5));
+        
     }
-    
 }
